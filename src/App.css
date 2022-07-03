@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: "Pretendard";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+summary,
+li {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  color: #369fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #369fff;
+  transition: all 300ms ease-in-out;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-wrapper {
+  max-width: 326px;
+  border-radius: 6px;
+  background-color: rgb(229, 231, 235);
+  overflow: hidden;
+  flex: 1;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  margin-bottom: 1px;
+  padding: 0 12px;
+  background-color: #fff;
+}
+
+.modal-title {
+  color: #111;
+  font-size: 16px;
+}
+
+.modal-btn {
+  color: #222;
+  border: 0;
+  background-color: #fff;
+}
+
+.modal-btn:hover {
+  color: #ff4949;
+  cursor: pointer;
+}
+
+.modal-items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1px;
+}
+
+.modal-item {
+  font-weight: 500;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.modal-item:hover {
+  color: #369fff;
+}
+
+.modal-item.disable {
+  color: #888;
+  cursor: not-allowed;
+}
+
+.modal-item.active {
+  color: #369fff;
 }
